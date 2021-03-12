@@ -86,18 +86,16 @@ Per poter aggiungere immagini di anteprima ai post ```add_theme_support('post-th
 Per poter includere uno stile in TinyMCE ```add_theme_support('editor-styles');``` e relativo file CSS ```add_editor_style('style.css');```
 
 
-## Il Loop
-```php
-<?php if (have_posts()): while (have_posts()): ?>
-    <?php the_post(); ?>
-
-    <h1><?php the_title(); ?></h1>
-    <?php if (get_post_type() == 'post'): ?>
-        <small><?php the_time('j F Y'); ?>, scritto da <?php the_author_posts_link(); ?></small>
-    <?php endif; ?>
-
-    <div class="content"><?php the_content(); ?></div>
-<?php endwhile; endif; ?>
+## Metadati da inserire nel file css
+```css
+/*
+    Theme Name: WP Sandbox
+    Author: AzzLabs
+    Description: Template wordpress sandbox
+    Version: 1.0.0
+    Text Domain: wp_sandbox
+    Tags: HTML5, CSS3
+*/
 ```
 
 ## Altre utility
