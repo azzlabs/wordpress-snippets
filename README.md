@@ -77,6 +77,13 @@ Per gli script, esiste una funzione simile (l'array come ultimo argomento nell'e
 ```php
 wp_enqueue_script('hero', get_template_directory_uri() . '/assets/animated_hero.js', ['jquery']);
 ```
+Asset e script vanno inseriti in una funzione enqueue, lanciata all'hook `wp_enqueue_scripts`
+```php
+function domain_enqueue_assets() {
+    // wp_enqueue_style(...);
+}
+add_action('wp_enqueue_scripts', 'domain_enqueue_assets');
+```
 
 ## Funzionalità tema per functions.php
 Per lasciar gestire il titolo della pagina a wordpress ```add_theme_support('title-tag');```
