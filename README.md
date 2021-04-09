@@ -114,3 +114,15 @@ function pre_mime_types($mimes) {
 }
 add_filter('upload_mimes', 'pre_mime_types');
 ```
+
+## Usare jQuery nel frontend
+```html
+<script>
+    (function($) {
+	// Esempio per il toggle di pannelli
+        $('.panel .panel-head').click(function () {
+            $(this).parent().toggleClass('open');
+        });
+    })(jQuery);
+</script>
+```
