@@ -124,7 +124,7 @@
 }
 ```
 ### Accordions
-#### CSS
+CSS
 ```css
 .acc-container {
     margin: 0;
