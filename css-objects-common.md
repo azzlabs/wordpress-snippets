@@ -123,3 +123,61 @@
     opacity: 0.65;
 }
 ```
+### Accordions
+#### CSS
+```css
+.acc-container {
+    margin: 0;
+    padding: 0 35px;
+    list-style-type: none;
+}
+
+.acc-container .acc-panel {
+    padding: 20px 25px;
+    background-color: #464D44;
+    border-bottom: 4px solid var(--color-green);
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+.acc-container .acc-panel:hover { 
+    background-color: #3c423a;
+}
+.acc-container .acc-panel:active { 
+    background-color: #353a33;
+}
+.acc-container .acc-panel .panel-content { 
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s;
+}
+.acc-container .acc-panel.open .panel-content { 
+    max-height: 500px;
+}
+.acc-container .acc-panel::after {
+    content: " ";
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    width: 15px;
+    height: 15px;
+    border-left: 4px solid var(--color-green);
+    border-top: 4px solid var(--color-green);
+    transform: rotate(225deg);
+    border-radius: 3px;
+    transition: transform 0.2s;
+}
+.acc-container .acc-panel.open::after { 
+    transform: rotate(45deg) translate(5px, 5px);
+}
+.acc-container .acc-panel h4 {
+    font-weight: 400;
+    padding-right: 25px;
+}
+```
+jQuery
+```javascript
+$('.acc-panel').click(function() {
+    $(this).toggleClass('open');
+});
+```
