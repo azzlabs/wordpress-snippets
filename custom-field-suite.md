@@ -29,7 +29,7 @@ function nows_cfs_options_screens( $screens ) {
     $screens[] = array(
         'name'            => 'nows_options',
         'menu_title'      => __('Opzioni tema'),
-        'page_title'      => __('Opzioni del tema NowSocial'),
+        'page_title'      => __('Opzioni del tema'),
         'menu_position'   => 100,
         'icon'            => 'dashicons-admin-generic',
         'field_groups'    => array('Opzioni tema'), // Field Group name(s) of CFS Field Group (can also be post IDs)
