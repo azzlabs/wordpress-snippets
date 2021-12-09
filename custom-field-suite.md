@@ -25,17 +25,17 @@ function getThemeOption($field_name, $default_val = false) {
 ## Pagine opzioni CFS
 ```php
 include('inc/cfs-options-pages.php');
-    function nows_cfs_options_screens( $screens ) {
-        $screens[] = array(
-            'name'            => 'nows_options',
-            'menu_title'      => __('Opzioni tema'),
-            'page_title'      => __('Opzioni del tema NowSocial'),
-            'menu_position'   => 100,
-            'icon'            => 'dashicons-admin-generic',
-            'field_groups'    => array('Opzioni tema'), // Field Group name(s) of CFS Field Group to use on this page (can also be post IDs)
-        );
-    
-        return $screens;
-    }
-    add_filter('cfs_options_screens', 'nows_cfs_options_screens');
+function nows_cfs_options_screens( $screens ) {
+    $screens[] = array(
+        'name'            => 'nows_options',
+        'menu_title'      => __('Opzioni tema'),
+        'page_title'      => __('Opzioni del tema NowSocial'),
+        'menu_position'   => 100,
+        'icon'            => 'dashicons-admin-generic',
+        'field_groups'    => array('Opzioni tema'), // Field Group name(s) of CFS Field Group (can also be post IDs)
+    );
+
+    return $screens;
+}
+add_filter('cfs_options_screens', 'nows_cfs_options_screens');
  ```
